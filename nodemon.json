@@ -1,0 +1,9 @@
+{
+  "ext": "js,json,ts,ejs",
+  "ignore": ["node_modules", "dist"],
+  "verbose": true,
+  "delay": 2500,
+  "execMap": {
+    "ts": "ts-node"
+  }
+}
