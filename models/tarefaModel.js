@@ -1,13 +1,27 @@
 // models/tarefaModel.js
 
-let tarefas = [];
-function adicionarTarefa(descricao) {
-    tarefas.push({ id: Date.now(), descricao });
+class TarefaModel{
+    /**
+     *
+     */
+    constructor() {
+        this.tarefas = [];
+    }
+
+adicionarTarefa(descricao) {
+    this.tarefas.push({ id: Date.now(), descricao });
 }
-function obterTarefas() {
-    return tarefas;
+
+obterTarefas() {
+    return this.tarefas;
 }
-function removerTarefa(id) {
-    tarefas = tarefas.filter(tarefa => tarefa.id !== id);
+
+removerTarefa(id) {
+    this.tarefas = this.tarefas.filter(tarefa => tarefa.id !== id);
 }
-module.exports = { adicionarTarefa, obterTarefas, removerTarefa };
+
+}
+
+const tarefaModel = new TarefaModel();
+export default tarefaModel;
+//module.exports = { adicionarTarefa, obterTarefas, removerTarefa };

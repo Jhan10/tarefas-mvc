@@ -1,8 +1,8 @@
 // app.js
-const express = require('express');
-const bodyParser = require('body-parser');
+import express from 'express';
+import bodyParser from 'body-parser';
 const app = express();
-const tarefaController = require('./controllers/tarefaController');
+import tarefaController from './controllers/tarefaController.js';
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));

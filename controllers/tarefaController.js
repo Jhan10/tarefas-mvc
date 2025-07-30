@@ -1,17 +1,23 @@
 // controllers/tarefaController.js
 
-const Tarefa = require('../models/tarefaModel');
-exports.exibirTarefas = (req, res) => {
-    const tarefas = Tarefa.obterTarefas();
+import tarefaModel from '../models/tarefaModel.js';
+
+class TarefaController {
+    
+exibirTarefas = (req, res) => {
+    const tarefas = tarefaModel.obterTarefas();
     res.render('index', { tarefas });
 };
-exports.adicionarTarefa = (req, res) => {
+adicionarTarefa = (req, res) => {
     const { descricao } = req.body;
-    Tarefa.adicionarTarefa(descricao);
+    tarefaModel.adicionarTarefa(descricao);
     res.redirect('/');
 };
-exports.removerTarefa = (req, res) => {
+removerTarefa = (req, res) => {
     const { id } = req.params;
-    Tarefa.removerTarefa(parseInt(id));
+    tarefaModel.removerTarefa(parseInt(id));
     res.redirect('/');
 };
+};
+const tarefaController = new TarefaController();
+export default tarefaController;
