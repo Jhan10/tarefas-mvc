@@ -9,8 +9,10 @@ class QrCodeManager {
         this.loadEvents(this.socket);
 
         this.socket.on("setSocketId", (data)=>{
-            this.spSocketId.innerHTML = data;
-            this.spSocketId.style = "font-weight: 300; color: blue;";
+            if(data==this.socket.id){
+                this.spSocketId.innerHTML = data;
+                this.spSocketId.style = "font-weight: 300; color: blue;";
+            }
         });
 
         this.socket.on("updateQrCodeImage", (imageData) => {
