@@ -1,0 +1,45 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= titulo %></title>
+    <link rel="stylesheet" href="/style.css">
+    <script type="module" src="script.js"></script>
+    <style></style>
+
+</head>
+<body>
+    <h1>
+        <%= titulo %>
+    </h1>
+    <br>
+    <div id="dvQrCodeBody">
+        <div class="QrCodeContent">
+            <div id="dvQrCodeImage">
+                <img id="QrCodeImage" src="<%= qrImage%>" alt="">
+            </div>
+            <div id="dvValidationMessage"></div>
+            <div>
+                <label for="spSocketId">Socket Id:</label>
+                <span id="spSocketId"></span>
+            </div>
+            <div>
+                <select id="OsReasonId">
+                    <option value="0">Selecione...</option>
+                    <option value="car">Carro</option>
+                    <option value="house">Casa</option>
+                    <option value="travel">Viagem</option>
+                    <option value="other">Outros</option>
+                </select>
+            </div>
+        </div>
+     </div>
+       <script src="http://localhost:4400/socket.io/socket.io.js">
+       </script>
+       <script>
+         /*   */ 
+        </script>
+</body>
+</html>

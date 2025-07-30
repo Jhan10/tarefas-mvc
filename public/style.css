@@ -1,0 +1,27 @@
+h1{
+    color: green;
+}
+
+.QrCodeContent{
+    border: 1px dashed gray;
+    min-height: 50%;
+    max-width: fit-content;
+}
+
+#dvQrCodeImage{
+    min-width: 250px;
+    min-height: 250px;
+    max-width: fit-content;
+    border: 1px dashed gray;
+}
+#QrCodeImage{
+    min-width: 250px;
+    min-height: 250px;
+}
+
+#dvValidationMessage{
+    min-width: 20%;
+    min-height: 20%;
+    color: red;
+    font-weight: bold;
+}
